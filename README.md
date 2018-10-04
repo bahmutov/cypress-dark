@@ -11,6 +11,8 @@
 
 ![Cypress dark](images/dark.png)
 
+You can find videos from Cypress Dark test run on [Cypress Dashboard](https://dashboard.cypress.io/#/projects/ipnbuo/runs)
+
 ## Install
 
 Requires [Node](https://nodejs.org/en/) version 6 or above.

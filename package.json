@@ -1,7 +1,7 @@
 {
   "name": "cypress-dark",
   "description": "Dark mode for Cypress test runner from user space",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": "https://github.com/bahmutov/cypress-dark/issues",
   "config": {
@@ -75,7 +75,9 @@
     "unit": "mocha src/*-spec.js",
     "unused-deps": "dependency-check --unused --no-dev .",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
     "ban-sensitive-files": "1.9.2",
@@ -88,6 +90,8 @@
     "nsp": "3.2.1",
     "pre-git": "3.17.1",
     "prettier-standard": "8.0.1",
-    "standard": "12.0.1"
+    "standard": "12.0.1",
+    "semantic-release": "^15.9.16",
+    "travis-deploy-once": "^5.0.9"
   }
 }

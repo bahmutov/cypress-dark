@@ -11,3 +11,6 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
+script:
+  - npm test
+  - npx cypress run --record

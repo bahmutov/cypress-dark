@@ -1,14 +1,19 @@
 /// <reference types="cypress" />
-describe('something', () => {
-  context('with tests', () => {
-    it('works', () => {
-      cy.wait(100)
+describe('devdocs.io', () => {
+  beforeEach(() => {
+    // use devdocs.io in dark mode for demo
+    cy.visit('https://devdocs.io/')
+    cy.setCookie('dark', '1')
+      .setCookie('hideIntro', '1')
+    // let the page load
+    cy.contains('._list-text', 'JavaScript').should('be.visible')
+  })
+  it('loads JavaScript docs', () => {
+    cy.get('input[name=q]').type('JavaScript{enter}', {
+      delay: 50
     })
-    it('works again', () => {
-      cy.wait(100)
-    })
-    it('and again', () => {
-      cy.wait(100)
-    })
+    cy.url().should('contain', '/javascript/')
+    cy.get('._content-loading').should('not.be.visible')
+    cy.contains('._list-item', 'JavaScript').should('have.class', 'active')
   })
 })

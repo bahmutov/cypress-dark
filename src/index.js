@@ -122,6 +122,10 @@ const css = `
   background-color: #292c2e;
   color: #cccccc;
 }
+.reporter .command-name-assert.command-state-passed .command-method span {
+  background-color: #045e45;
+  color: #17cf20;
+}
 `
 
 /* eslint-env mocha, browser */

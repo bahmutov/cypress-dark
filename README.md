@@ -9,15 +9,23 @@
 [![standard][standard-image]][standard-url]
 [![renovate-app badge][renovate-badge]][renovate-app]
 
+![Cypress dark](images/dark.png)
+
 ## Install
 
 Requires [Node](https://nodejs.org/en/) version 6 or above.
 
 ```sh
-npm install --save cypress-dark
+npm install --save-dev cypress-dark
 ```
 
 ## Use
+
+Add to your [cypress/support/index.js](cypress/support/index.js) line
+
+```js
+require('cypress-dark')
+```
 
 ### Small print
 

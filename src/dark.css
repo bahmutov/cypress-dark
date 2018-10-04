@@ -1,5 +1,3 @@
-// for now CSS is a string here
-const css = `
 /* Cypress v3 */
 .reporter {
   background-color: #222426
@@ -122,13 +120,3 @@ const css = `
   background-color: #292c2e;
   color: #cccccc;
 }
-`
-
-/* eslint-env mocha, browser */
-/* global Cypress */
-before(() => {
-  const $head = Cypress.$(parent.window.document.head)
-  if (!$head.find('#cypress-dark').length) {
-    $head.append(`<style type="text/css" id="cypress-dark">\n${css}</style>`)
-  }
-})

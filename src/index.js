@@ -8,6 +8,12 @@ const cssVariables = require('postcss-css-variables')
 const convertCssVariables = mycss =>
   postcss([cssVariables()]).process(mycss).css
 
+/**
+ * Converts CSS variables to plain CSS
+ */
+const convertCssVariables = mycss =>
+  postcss([cssVariables()]).process(mycss).css
+
 const knownThemes = ['dark', 'halloween']
 
 /* eslint-env mocha, browser */

@@ -192,11 +192,3 @@
   .collapsible-more {
   margin-left: 5px;
 }
-
-/* icons */
-.reporter .runnable.test.runnable-failed .runnable-state:before {
-  content: '☠️';
-}
-.reporter .runnable.test.runnable-failed .runnable-state:hover {
-  font-size: 110%;
-}

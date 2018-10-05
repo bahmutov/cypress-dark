@@ -94,5 +94,9 @@
     "semantic-release": "15.9.17",
     "standard": "12.0.1",
     "travis-deploy-once": "5.0.9"
+  },
+  "dependencies": {
+    "postcss": "7.0.5",
+    "postcss-css-variables": "0.10.0"
   }
 }

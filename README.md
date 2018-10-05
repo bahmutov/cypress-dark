@@ -39,6 +39,12 @@ You can set name of the theme in your [cypress.json](cypress.json) file.
 
 If the theme name is unknown (look at CSS files in [src](src) folder), or unspecified, default `dark` theme will be used.
 
+## Themes
+
+For now all themes are shipped with this package and can use CSS variables. Available thems are:
+
+- [dark](src/dark.css)
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2018

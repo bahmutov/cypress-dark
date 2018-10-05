@@ -27,16 +27,12 @@ before(() => {
 
   const themeFilename = join(__dirname, `${theme}.css`)
 
-  cy
-    .readFile(themeFilename)
-    .then(convertCssVariables)
-    .then(css => {
-      console.log(css)
-      const $head = Cypress.$(parent.window.document.head)
-      if (!$head.find('#cypress-dark').length) {
-        $head.append(
-          `<style type="text/css" id="cypress-dark" theme="${theme}">\n${css}</style>`
-        )
-      }
-    })
+  cy.readFile(themeFilename).then(convertCssVariables).then(css => {
+    const $head = Cypress.$(parent.window.document.head)
+    if (!$head.find('#cypress-dark').length) {
+      $head.append(
+        `<style type="text/css" id="cypress-dark" theme="${theme}">\n${css}</style>`
+      )
+    }
+  })
 })

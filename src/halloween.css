@@ -1,0 +1,257 @@
+/* Cypress v3 */
+:root {
+  --background: #222426;
+  --dark-background: #171717;
+  --lighter-background: #3a3a3a;
+  --light-element: #444648;
+  --active-button: #292c2e;
+  --active-color: #ffa22f;
+  --runner-shadow: inset 0 0 10px #f88d09;
+  --wrap-shadow: 0 3px 6px #f88d09;
+  --button-border: 1px solid #3a3a3a;
+  --command-border: 1px solid #606060;
+  --command-important-border: 1px solid #aaaaaa;
+  --active-command-border: 1px solid #707070;
+  --highlighted-text: #dddddd;
+  --pinned-command-background-color: #432001;
+  --pinned-command-background-color-hover: #e87816;
+  --icons-color: #a55704;
+  --icons-hover-color: #d26e03;
+  /* passed and failed commands */
+  --failed-command-background-color: inherit;
+  --state-failed-background-color: #ae3a46;
+  --state-failed-color: #f0adad;
+  /* other misc stuff */
+  --header-color: #ee7205;
+  --header-shadow: 0 1px 3px #f88d09;
+  --header-border: solid 1px #f88d09;
+}
+.reporter {
+  background-color: var(--background);
+}
+
+.runner header {
+  background-color: var(--background);
+  box-shadow: var(--header-shadow);
+  -webkit-box-shadow: var(--header-shadow);
+}
+.runner .url {
+  color: var(--header-color);
+  background-color: var(--background);
+  border: var(--header-border);
+}
+.runner .url:hover,
+.runner .url:focus,
+.runner .url:active {
+  color: var(--header-color);
+}
+.runner .highlighted .url {
+  background-color: var(--light-element);
+}
+.runner .url:focus {
+  background-color: var(--light-element);
+}
+
+.runner .viewport-info button {
+  text-shadow: none;
+}
+.runner .viewport-info button:hover {
+  color: var(--active-color);
+}
+.runner {
+  background-image: none;
+  background-color: var(--lighter-background);
+  box-shadow: var(--runner-shadow);
+  -webkit-box-shadow: var(--runner-shadow);
+}
+
+.reporter .wrap {
+  box-shadow: var(--wrap-shadow);
+  -webkit-box-shadow: var(--wrap-shadow);
+}
+
+.reporter .container {
+  border: none;
+}
+
+.runner .selector-playground-toggle:hover {
+  background: none;
+  color: var(--active-color);
+}
+
+.reporter header {
+  background-color: var(--background);
+  color: var(--active-color);
+  box-shadow: var(--header-shadow);
+  -webkit-box-shadow: var(--header-shadow);
+}
+.reporter header button {
+  background-color: var(--background);
+}
+.reporter header button:hover {
+  background-color: var(--background);
+  color: var(--active-color);
+}
+
+.reporter .runnable {
+  background-color: var(--background);
+}
+.reporter .runnable:hover {
+  background-color: var(--background);
+}
+.reporter .commands-container {
+  background-color: var(--active-button);
+}
+.reporter .command-wrapper:hover {
+  background-color: var(--active-button);
+  color: var(--highlighted-text);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.reporter .focus-tests button {
+  border-right: var(--button-border);
+}
+.reporter .stats .duration {
+  border-left: var(--button-border);
+  border-right: var(--button-border);
+}
+.reporter .controls > span:last-child button {
+  border-right: var(--button-border);
+}
+
+.reporter .command-state-pending > span > .command-wrapper {
+  background-color: var(--lighter-background);
+}
+.reporter .command-type-parent {
+  border-top: var(--command-border);
+}
+.reporter .command-type-parent:hover {
+  border-top: var(--active-command-border);
+}
+
+.runner .aut-iframe {
+  background-color: var(--background);
+}
+
+.reporter .runnable.suite > div > .runnable-wrapper .runnable-title {
+  color: var(--active-color);
+}
+
+.reporter .hooks-container .hook-name:hover {
+  color: var(--highlighted-text);
+}
+
+.reporter .command-is-pinned > span > .command-wrapper {
+  background-color: var(--pinned-command-background-color);
+}
+.reporter .command-is-pinned > span > .command-wrapper:hover {
+  background-color: var(--pinned-command-background-color-hover);
+}
+.runner .message-controls {
+  background-color: var(--background);
+}
+.runner .snapshot-controls.showing-selection .toggle-selection {
+  background-color: var(--active-button);
+}
+.runner .snapshot-controls button:active {
+  background-color: var(--active-button);
+  color: var(--active-color);
+}
+.runner .snapshot-controls .snapshot-state-picker button.state-is-selected {
+  background-color: #666565;
+  color: yellow;
+}
+.runner .snapshot-controls button:hover {
+  background-color: var(--active-button);
+  color: var(--active-color);
+}
+.reporter .command-name-assert.command-state-passed .command-method span {
+  background-color: #045e45;
+  color: #17cf20;
+}
+
+.reporter ::-webkit-scrollbar-thumb {
+  background-color: var(--background);
+}
+.reporter ::-webkit-scrollbar-track {
+  background-color: var(--dark-background);
+}
+
+.reporter .command-state-failed > span > .command-wrapper {
+  background-color: var(--failed-command-background-color);
+}
+.reporter .command-state-failed > span > .command-wrapper:hover {
+  background-color: var(--failed-command-background-color);
+}
+.reporter .command-name-assert.command-state-failed .command-method span {
+  background-color: var(--state-failed-background-color);
+  color: var(--state-failed-color);
+}
+.reporter .runnable pre {
+  background-color: var(--background);
+}
+.reporter .runnable pre:hover {
+  background-color: var(--lighter-background);
+}
+.reporter pre {
+  border: var(--command-important-border);
+}
+
+.reporter .runnable-controls i {
+  color: var(--icons-color);
+}
+.reporter .runnable-controls i:hover {
+  color: var(--icons-hover-color);
+}
+.reporter
+  .runnable.suite.runnable-failed
+  > div
+  > .runnable-wrapper
+  .collapsible-more {
+  margin-left: 5px;
+}
+
+/* icons in the reporter */
+.reporter .runnable-state:hover {
+  font-size: 130%;
+}
+.reporter .runnable.test.runnable-failed .runnable-state:before {
+  content: '☠️';
+}
+.reporter .runnable.test.runnable-pending .runnable-state:before {
+  content: '👻';
+}
+.reporter .runnable.test.runnable-passed .runnable-state:before {
+  content: '🎃';
+}
+.reporter .runnable.test.runnable-active .runnable-state:before {
+  content: '🕸';
+}
+/* test has not started yet */
+.reporter .runnable.test.runnable-processing .runnable-state:before {
+  content: '⚰️';
+}
+.reporter .command-state-pending .command-number i:before {
+  content: '☠️';
+}
+/* top level test counters icons */
+.fa-check:before,
+.reporter .runnable.runnable-passed > .runnable-wrapper .runnable-state:before {
+  content: '🎃';
+}
+.fa-times:before,
+.reporter .runnable.test.runnable-failed .runnable-state:before {
+  content: '☠️';
+}
+.fa-circle-o-notch:before,
+.reporter
+  .runnable.runnable-pending
+  > .runnable-wrapper
+  .runnable-state:before {
+  content: '👻';
+}
+
+/* switch thumb tack icon to syringe */
+.fa-thumb-tack:before {
+  content: '💉';
+}

@@ -1,4 +1,12 @@
 const { join } = require('path')
+const postcss = require('postcss')
+const cssVariables = require('postcss-css-variables')
+
+/**
+ * Converts CSS variables to plain CSS
+ */
+const convertCssVariables = mycss =>
+  postcss([cssVariables()]).process(mycss).css
 
 const knownThemes = ['dark']
 
@@ -19,7 +27,7 @@ before(() => {
 
   const themeFilename = join(__dirname, `${theme}.css`)
 
-  cy.readFile(themeFilename).then(css => {
+  cy.readFile(themeFilename).then(convertCssVariables).then(css => {
     const $head = Cypress.$(parent.window.document.head)
     if (!$head.find('#cypress-dark').length) {
       $head.append(

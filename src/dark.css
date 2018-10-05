@@ -1,30 +1,57 @@
 /* Cypress v3 */
-.reporter {
-  background-color: #222426
+:root {
+  --background: #222426;
+  --dark-background: #171717;
+  --lighter-background: #3a3a3a;
+  --light-element: #444648;
+  --active-button: #292c2e;
+  --active-color: #cccccc;
+  --button-border: 1px solid #3a3a3a;
+  --command-border: 1px solid #606060;
+  --command-important-border: 1px solid #aaaaaa;
+  --active-command-border: 1px solid #707070;
+  --highlighted-text: #dddddd;
+  --pinned-command-background-color: #3b1654;
+  --pinned-command-background-color-hover: #531f77;
+  --icons-color: #999999;
+  --icons-hover-color: #cccccc;
+  /* passed and failed commands */
+  --failed-command-background-color: inherit;
+  --state-failed-background-color: #ae3a46;
+  --state-failed-color: #f0adad;
 }
+.reporter {
+  background-color: var(--background);
+}
+
 .runner header {
-  background-color: #222426
+  background-color: var(--background);
 }
 .runner header .url {
   color: #aaaaaa;
-  background-color: #222426
+  background-color: var(--background);
 }
-.runner .url:hover, .runner .url:focus, .runner .url:active {
+.runner .url:hover,
+.runner .url:focus,
+.runner .url:active {
   color: #eeeeee;
 }
-.runner .highlighted .url, .runner .url:focus {
-  background-color: #444648;
+.runner .highlighted .url {
+  background-color: var(--light-element);
+}
+.runner .url:focus {
+  background-color: var(--light-element);
 }
 
 .runner .viewport-info button {
-  text-shadow: none
+  text-shadow: none;
 }
 .runner .viewport-info button:hover {
-  color: #cccccc;
+  color: var(--active-color);
 }
 .runner {
   background-image: none;
-  background-color: #3a3a3a
+  background-color: var(--lighter-background);
 }
 
 .reporter .container {
@@ -33,94 +60,135 @@
 
 .runner .selector-playground-toggle:hover {
   background: none;
-  color: #cccccc;
+  color: var(--active-color);
 }
 
 .reporter header {
-  background-color: #222426;
-  color: #cccccc;
+  background-color: var(--background);
+  color: var(--active-color);
 }
 .reporter header button {
-  background-color: #222426;
+  background-color: var(--background);
 }
 .reporter header button:hover {
-  background-color: #222426;
-  color: #cccccc;
+  background-color: var(--background);
+  color: var(--active-color);
 }
 
 .reporter .runnable {
-  background-color: #222426;
+  background-color: var(--background);
 }
 .reporter .runnable:hover {
-  background-color: #222426;
+  background-color: var(--background);
 }
 .reporter .commands-container {
-  background-color: #292c2e;
+  background-color: var(--active-button);
 }
 .reporter .command-wrapper:hover {
-  background-color: #292c2e;
-  color: #ffffff;
+  background-color: var(--active-button);
+  color: var(--highlighted-text);
   box-shadow: none;
   -webkit-box-shadow: none;
 }
 .reporter .focus-tests button {
-  border-right: 1px solid #3a3a3a;
+  border-right: var(--button-border);
 }
 .reporter .stats .duration {
-  border-left: 1px solid #3a3a3a;
-  border-right: 1px solid #3a3a3a;
+  border-left: var(--button-border);
+  border-right: var(--button-border);
 }
 .reporter .controls > span:last-child button {
-  border-right: 1px solid #3a3a3a;
+  border-right: var(--button-border);
 }
 
 .reporter .command-state-pending > span > .command-wrapper {
-  background-color: #3a3a3a;
+  background-color: var(--lighter-background);
 }
 .reporter .command-type-parent {
-  border-top: 1px solid #666565;
+  border-top: var(--command-border);
 }
 .reporter .command-type-parent:hover {
-  border-top: 1px solid #777777;
+  border-top: var(--active-command-border);
 }
 
 .runner .aut-iframe {
-  background-color: #222426;
+  background-color: var(--background);
 }
 
 .reporter .runnable.suite > div > .runnable-wrapper .runnable-title {
-  color: #cccccc;
+  color: var(--active-color);
 }
 
 .reporter .hooks-container .hook-name:hover {
-  color: #ffffff;
+  color: var(--highlighted-text);
 }
 
 .reporter .command-is-pinned > span > .command-wrapper {
-  background-color: #3b1654;
+  background-color: var(--pinned-command-background-color);
 }
 .reporter .command-is-pinned > span > .command-wrapper:hover {
-  background-color: #531f77;
+  background-color: var(--pinned-command-background-color-hover);
 }
 .runner .message-controls {
-  background-color: #222426;
+  background-color: var(--background);
 }
 .runner .snapshot-controls.showing-selection .toggle-selection {
-  background-color: #292c2e;
+  background-color: var(--active-button);
 }
 .runner .snapshot-controls button:active {
-  background-color: #292c2e;
-  color: #cccccc;
+  background-color: var(--active-button);
+  color: var(--active-color);
 }
 .runner .snapshot-controls .snapshot-state-picker button.state-is-selected {
   background-color: #666565;
   color: yellow;
 }
 .runner .snapshot-controls button:hover {
-  background-color: #292c2e;
-  color: #cccccc;
+  background-color: var(--active-button);
+  color: var(--active-color);
 }
 .reporter .command-name-assert.command-state-passed .command-method span {
   background-color: #045e45;
   color: #17cf20;
+}
+
+.reporter ::-webkit-scrollbar-thumb {
+  background-color: var(--background);
+}
+.reporter ::-webkit-scrollbar-track {
+  background-color: var(--dark-background);
+}
+
+.reporter .command-state-failed > span > .command-wrapper {
+  background-color: var(--failed-command-background-color);
+}
+.reporter .command-state-failed > span > .command-wrapper:hover {
+  background-color: var(--failed-command-background-color);
+}
+.reporter .command-name-assert.command-state-failed .command-method span {
+  background-color: var(--state-failed-background-color);
+  color: var(--state-failed-color);
+}
+.reporter .runnable pre {
+  background-color: var(--background);
+}
+.reporter .runnable pre:hover {
+  background-color: var(--lighter-background);
+}
+.reporter pre {
+  border: var(--command-important-border);
+}
+
+.reporter .runnable-controls i {
+  color: var(--icons-color);
+}
+.reporter .runnable-controls i:hover {
+  color: var(--icons-hover-color);
+}
+.reporter
+  .runnable.suite.runnable-failed
+  > div
+  > .runnable-wrapper
+  .collapsible-more {
+  margin-left: 5px;
 }

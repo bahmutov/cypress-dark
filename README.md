@@ -29,11 +29,11 @@ Add to your [cypress/support/index.js](cypress/support/index.js) line
 require('cypress-dark')
 ```
 
-You can set name of the theme in your [cypress.json](cypress.json) file.
+By default dark theme will be loaded. If you want to switch to another theme, set its name in your [cypress.json](cypress.json) file.
 
 ```json
 {
-  "theme": "dark"
+  "theme": "halloween"
 }
 ```
 
@@ -43,7 +43,8 @@ If the theme name is unknown (look at CSS files in [src](src) folder), or unspec
 
 For now all themes are shipped with this package and can use CSS variables. Available thems are:
 
-- [dark](src/dark.css)
+- [dark](src/dark.css) see [images/dark.png](images/dark.png)
+- [halloween](src/halloween.css) see [images/halloween.png](images/halloween.png)
 
 ### Small print
 

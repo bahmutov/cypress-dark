@@ -29,13 +29,23 @@ Add to your [cypress/support/index.js](cypress/support/index.js) line
 require('cypress-dark')
 ```
 
+You can set name of the theme in your [cypress.json](cypress.json) file.
+
+```json
+{
+  "theme": "dark"
+}
+```
+
+If the theme name is unknown (look at CSS files in [src](src) folder), or unspecified, default `dark` theme will be used.
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2018
 
-* [@bahmutov](https://twitter.com/bahmutov)
-* [glebbahmutov.com](https://glebbahmutov.com)
-* [blog](https://glebbahmutov.com/blog)
+- [@bahmutov](https://twitter.com/bahmutov)
+- [glebbahmutov.com](https://glebbahmutov.com)
+- [blog](https://glebbahmutov.com/blog)
 
 License: MIT - do anything with the code, but don't blame me if it does not work.
 

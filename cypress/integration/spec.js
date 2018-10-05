@@ -1,5 +1,9 @@
 /// <reference types="cypress" />
-describe('devdocs.io', () => {
+/*
+  Several tests that show how Cypress test runner looks with
+  a custom color theme
+*/
+describe('Cypress themes', () => {
   // beforeEach(() => {
   //   // use devdocs.io in dark mode for demo
   //   cy.visit('https://devdocs.io/')

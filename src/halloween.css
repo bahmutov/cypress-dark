@@ -10,7 +10,7 @@
   --wrap-shadow: 0 3px 6px #f88d09;
   --button-border: 1px solid #3a3a3a;
   --command-border: 1px solid #606060;
-  --command-important-border: 1px solid #aaaaaa;
+  --command-important-border: 1px solid #888888;
   --active-command-border: 1px solid #707070;
   --highlighted-text: #dddddd;
   --pinned-command-background-color: #432001;
@@ -25,6 +25,10 @@
   --header-color: #ee7205;
   --header-shadow: 0 1px 3px #f88d09;
   --header-border: solid 1px #f88d09;
+  /* main passing, failing, skipped colors */
+  --failed-color: #c900ff;
+  --passed-color: #ff9a00;
+  --pending-color: #9b9b9b;
 }
 .reporter {
   background-color: var(--background);
@@ -254,4 +258,51 @@
 /* switch thumb tack icon to syringe */
 .fa-thumb-tack:before {
   content: '💉';
+}
+
+.reporter .no-commands {
+  background-color: var(--background);
+  border: none;
+  color: var(--pending-color);
+}
+
+.reporter .runnable.test.runnable-failed > .runnable-wrapper {
+  border-left: 10px solid var(--failed-color);
+}
+.reporter .runnable.test.runnable-passed > .runnable-wrapper {
+  border-left: 10px solid var(--passed-color);
+}
+.reporter .runnable.test.runnable-pending > .runnable-wrapper {
+  border-left: 10px solid var(--pending-color);
+}
+.reporter .stats li.failed {
+  color: var(--failed-color);
+}
+.reporter .stats li.passed {
+  color: var(--passed-color);
+}
+.reporter .stats li.pending {
+  color: var(--pending-color);
+}
+.reporter .runnable.runnable-passed > .runnable-wrapper .runnable-title {
+  color: var(--passed-color);
+}
+.reporter .runnable.runnable-pending > .runnable-wrapper .runnable-title {
+  color: var(--pending-color);
+}
+.reporter .runnable.runnable-failed > .runnable-wrapper .runnable-title {
+  color: var(--failed-color);
+}
+.reporter .runnable.suite > div > .runnable-wrapper .runnable-title {
+  color: 'inherit';
+}
+.reporter .runnable.suite.runnable-failed > div > .runnable-wrapper {
+  border-left: 10px solid var(--failed-color);
+}
+.reporter .runnable.suite.runnable-passed > div > .runnable-wrapper {
+  border-left: 10px solid var(--passed-color);
+}
+.reporter .runnable.suite.runnable-pending > div > .runnable-wrapper,
+.reporter .runnable.test.runnable-pending > .runnable-wrapper {
+  border-left: 10px solid var(--pending-color);
 }

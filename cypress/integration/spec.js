@@ -36,3 +36,10 @@ describe('Cypress themes', () => {
 
   it('has skipped test')
 })
+describe('passing suite', () => {
+  it('has 1 passing test', () => {})
+})
+describe('skipped suite', () => {
+  it('is empty')
+  it('is also empty')
+})

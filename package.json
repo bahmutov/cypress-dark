@@ -31,6 +31,7 @@
   "files": [
     "src/*.css",
     "src/*.js",
+    "src/*.mp3",
     "!src/*-spec.js"
   ],
   "homepage": "https://github.com/bahmutov/cypress-dark#readme",

@@ -54,6 +54,8 @@ Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2018
 - [glebbahmutov.com](https://glebbahmutov.com)
 - [blog](https://glebbahmutov.com/blog)
 
+"Maniacal Witches Laugh Sound" by [Mike Koenig](http://soundbible.com/1129-Maniacal-Witches-Laugh.html), under license Attribution 3.0
+
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
 Support: if you find any problems with this module, email / tweet /

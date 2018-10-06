@@ -1,3 +1,4 @@
+/// <reference types="cypress" />
 const { join } = require('path')
 const postcss = require('postcss')
 const cssVariables = require('postcss-css-variables')
@@ -10,9 +11,17 @@ const convertCssVariables = mycss =>
 
 const knownThemes = ['dark', 'halloween']
 
+const isStyleLoaded = $head => $head.find('#cypress-dark').length > 0
+
 /* eslint-env mocha, browser */
 /* global Cypress, cy */
 before(() => {
+  // do we have style loaded already? if yes, nothing to do
+  const $head = Cypress.$(parent.window.document.head)
+  if (isStyleLoaded($head)) {
+    return
+  }
+
   let theme = Cypress._.toLower(Cypress.config('theme') || 'dark')
 
   if (!knownThemes.includes(theme)) {
@@ -28,14 +37,12 @@ before(() => {
   const themeFilename = join(__dirname, `${theme}.css`)
 
   cy
-    .readFile(themeFilename)
+    .readFile(themeFilename, { log: false })
     .then(convertCssVariables)
     .then(css => {
       const $head = Cypress.$(parent.window.document.head)
-      if (!$head.find('#cypress-dark').length) {
-        $head.append(
-          `<style type="text/css" id="cypress-dark" theme="${theme}">\n${css}</style>`
-        )
-      }
+      $head.append(
+        `<style type="text/css" id="cypress-dark" theme="${theme}">\n${css}</style>`
+      )
     })
 })

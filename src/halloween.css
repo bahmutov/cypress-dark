@@ -19,8 +19,8 @@
   --icons-hover-color: #d26e03;
   /* passed and failed commands */
   --failed-command-background-color: inherit;
-  --state-failed-background-color: #ae3a46;
-  --state-failed-color: #f0adad;
+  --state-failed-background-color: #9900c2;
+  --state-failed-color: #db57ff;
   /* other misc stuff */
   --header-color: #ee7205;
   --header-shadow: 0 1px 3px #f88d09;
@@ -29,6 +29,9 @@
   --failed-color: #c900ff;
   --passed-color: #ff9a00;
   --pending-color: #9b9b9b;
+  /* assert "badge" in front of passing or failing assertion */
+  --assert-passed-background-color: #a55704;
+  --assert-passed-color: #ff9a00;
 }
 .reporter {
   background-color: var(--background);
@@ -170,8 +173,8 @@
   color: var(--active-color);
 }
 .reporter .command-name-assert.command-state-passed .command-method span {
-  background-color: #045e45;
-  color: #17cf20;
+  background-color: var(--assert-passed-background-color);
+  color: var(--assert-passed-color);
 }
 
 .reporter ::-webkit-scrollbar-thumb {

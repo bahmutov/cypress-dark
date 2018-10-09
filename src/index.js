@@ -52,7 +52,6 @@ before(() => {
     .readFile(themeFilename, { log: false })
     .then(convertCssVariables)
     .then(css => {
-      const $head = Cypress.$(parent.window.document.head)
       $head.append(
         `<style type="text/css" id="cypress-dark" theme="${theme}">\n${css}</style>`
       )

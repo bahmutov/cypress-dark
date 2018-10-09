@@ -27,7 +27,7 @@ describe('Cypress themes', () => {
   it('has failing test if needed', () => {
     // cy.wait(10000000)
     expect(1).to.equal(1)
-    // expect(1).to.equal(2)
+    expect(1).to.equal(2)
   })
 
   it('has passing test', () => {

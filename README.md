@@ -23,6 +23,16 @@ npm install --save-dev cypress-dark
 
 ## Use
 
+### Install Halloween theme
+
+Add to your [cypress/support/index.js](cypress/support/index.js) line
+
+```js
+require('cypress-dark/src/halloween')
+```
+
+### Install Dark theme
+
 Add to your [cypress/support/index.js](cypress/support/index.js) line
 
 ```js
@@ -33,7 +43,7 @@ By default dark theme will be loaded. If you want to switch to another theme, se
 
 ```json
 {
-  "theme": "halloween"
+  "theme": "dark"
 }
 ```
 

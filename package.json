@@ -15,7 +15,7 @@
         "npm run ban"
       ],
       "pre-push": [
-        "echo skipping 'npm run unused-deps' because we use import keyword",
+        "npm run unused-deps",
         "npm run secure",
         "npm run license",
         "npm run ban -- --all",

@@ -19,4 +19,9 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-require('../../src')
+// usually client project would load
+// - either Halloween theme
+// require('cypress-dark/src/halloween')
+// - or any theme via (theme "dark" by default)
+// you can also set the name of the theme to load in "cypress.json"
+// require('cypress-dark')

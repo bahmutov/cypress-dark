@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import { join } from 'path'
-import { getSourceFolder, hasFailed, loadTheme } from './utils'
+const { join } = require('path')
+const { getSourceFolder, hasFailed, loadTheme } = require('./utils')
 
 /* eslint-env mocha, browser */
 /* global cy */

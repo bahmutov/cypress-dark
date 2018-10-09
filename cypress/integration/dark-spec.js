@@ -1,4 +1,10 @@
 /// <reference types="cypress" />
+
+// usually we load theme from "cypress/support/index.js"
+// but since we are checking multiple themes, each spec file
+// loads its own
+require('../../src')
+
 /*
   Several tests that show how Cypress test runner looks with
   a custom color theme

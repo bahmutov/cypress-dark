@@ -1,5 +1,4 @@
-/// <reference types="cypress" />
-import { loadTheme } from './utils'
+const { loadTheme } = require('./utils')
 
 /* eslint-env mocha, browser */
 before(loadTheme())

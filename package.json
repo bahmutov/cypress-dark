@@ -15,7 +15,7 @@
         "npm run ban"
       ],
       "pre-push": [
-        "npm run unused-deps",
+        "echo skipping 'npm run unused-deps' because we use import keyword",
         "npm run secure",
         "npm run license",
         "npm run ban -- --all",
@@ -75,7 +75,7 @@
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "npm run unit",
     "unit": "mocha src/*-spec.js",
-    "unused-deps": "dependency-check --unused --no-dev .",
+    "unused-deps": "dependency-check --detective precinct --unused --no-dev .",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "semantic-release": "semantic-release",
@@ -91,6 +91,7 @@
     "mocha": "5.2.0",
     "nsp": "3.2.1",
     "pre-git": "3.17.1",
+    "precinct": "5.1.0",
     "prettier-standard": "8.0.1",
     "semantic-release": "15.9.17",
     "standard": "12.0.1",

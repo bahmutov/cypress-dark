@@ -96,6 +96,6 @@
   },
   "dependencies": {
     "postcss": "7.0.5",
-    "postcss-css-variables": "0.10.0"
+    "postcss-css-variables": "0.11.0"
   }
 }

@@ -25,9 +25,6 @@
       "post-merge": []
     }
   },
-  "engines": {
-    "node": "10.12.0"
-  },
   "files": [
     "src/*.css",
     "src/*.js",

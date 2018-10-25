@@ -1,10 +1,16 @@
 /// <reference types="cypress" />
 const { join } = require('path')
-const { getSourceFolder, hasFailed, loadTheme } = require('./utils')
+const {
+  getSourceFolder,
+  hasFailed,
+  loadTheme,
+  stubMediaQuery
+} = require('./utils')
 
 /* eslint-env mocha, browser */
 /* global cy */
 before(loadTheme('halloween'))
+before(stubMediaQuery())
 
 const witchLaughs = () => {
   const filename = join(getSourceFolder(), 'halloween-laugh.mp3')

@@ -86,9 +86,27 @@ const loadTheme = theme => {
   }
 }
 
+const stubMediaQuery = () => () => {
+  // if website supports loading dark theme styles via JavaScript
+  // then tell it to. Website should ask like this
+  // if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  //  load dark css
+  // }
+  Cypress.on('window:before:load', win => {
+    cy
+      .stub(win, 'matchMedia')
+      .withArgs('(prefers-color-scheme: dark)')
+      .returns({
+        matches: true
+      })
+      .as('dark-media-query')
+  })
+}
+
 module.exports = {
   getSourceFolder,
   hasFailed,
   loadTheme,
-  isTheme
+  isTheme,
+  stubMediaQuery
 }

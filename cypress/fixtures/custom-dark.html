@@ -1,0 +1,19 @@
+<body>
+
+  <head>
+    <link rel="stylesheet" href="normal.css">
+    <script>
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        const link = document.createElement("link")
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        link.href = 'dark.css';
+        document.head.appendChild(link)
+      }
+    </script>
+  </head>
+
+  <body>
+    <p>Custom dark theme on this page</p>
+  </body>
+</body>

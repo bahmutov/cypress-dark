@@ -46,6 +46,8 @@ const hasSuiteFailed = suite => {
 
 const isTheme = theme => getTheme() === theme
 
+const shouldStubMediaQuery = () => Boolean(Cypress.config('darkMediaQuery'))
+
 /**
  * returns a function that a `before` callback can call to load desired theme
  * @example before(toLoadTheme('halloween'))
@@ -87,6 +89,10 @@ const loadTheme = theme => {
 }
 
 const stubMediaQuery = () => () => {
+  if (!shouldStubMediaQuery()) {
+    return
+  }
+
   // if website supports loading dark theme styles via JavaScript
   // then tell it to. Website should ask like this
   // if (window.matchMedia('(prefers-color-scheme: dark)').matches) {

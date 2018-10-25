@@ -56,6 +56,22 @@ For now all themes are shipped with this package and can use CSS variables. Avai
 - [dark](src/dark.css) see [images/dark.png](images/dark.png)
 - [halloween](src/halloween.css) see [images/halloween.png](images/halloween.png)
 
+## Dark page under test
+
+You can "tell" the web application under test to switch to the dark mode using `media (prefers-color-scheme: dark)` if the application uses JavaScript media query to check for preferred scheme. See original issue [#29](https://github.com/bahmutov/cypress-dark/issues/29) and [cypress/fixtures/custom-dark.html](cypress/fixtures/custom-dark.html) page.
+
+To enable stubbing `window.matchMedia` from your tests and "force" your app to switch to dark mode, set option in `cypress.json`
+
+```json
+{
+  "darkMediaQuery": true
+}
+```
+
+Result - both the test runner and the application are running in dark mode.
+
+![Dark application](images/dark-media.png)
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2018

@@ -90,7 +90,7 @@
     "pre-git": "3.17.1",
     "precinct": "5.1.0",
     "prettier-standard": "8.0.1",
-    "semantic-release": "15.10.5",
+    "semantic-release": "15.10.6",
     "standard": "12.0.1",
     "travis-deploy-once": "5.0.9"
   },

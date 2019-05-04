@@ -95,7 +95,7 @@
     "travis-deploy-once": "5.0.11"
   },
   "dependencies": {
-    "postcss": "7.0.15",
+    "postcss": "7.0.16",
     "postcss-css-variables": "0.12.0"
   }
 }

@@ -11,7 +11,7 @@ const getSourceFolder = () => {
   const sourceFolder = installedAsFile
     ? join('node_modules/cypress-dark/src')
     : __dirname
-  return sourceFolder
+  return sourceFolder.replace(/^\//, '')
 }
 
 /**
@@ -77,8 +77,7 @@ const loadTheme = theme => {
 
     const themeFilename = join(getSourceFolder(), `${theme}.css`)
 
-    cy
-      .readFile(themeFilename, { log: false })
+    cy.readFile(themeFilename, { log: false })
       .then(convertCssVariables)
       .then(css => {
         $head.append(
@@ -99,8 +98,7 @@ const stubMediaQuery = () => () => {
   //  load dark css
   // }
   Cypress.on('window:before:load', win => {
-    cy
-      .stub(win, 'matchMedia')
+    cy.stub(win, 'matchMedia')
       .withArgs('(prefers-color-scheme: dark)')
       .returns({
         matches: true

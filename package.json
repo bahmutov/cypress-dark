@@ -16,7 +16,6 @@
       ],
       "pre-push": [
         "npm run unused-deps",
-        "npm run secure",
         "npm run license",
         "npm run ban -- --all",
         "npm run size"
@@ -68,7 +67,6 @@
     "prelint": "npm run pretty",
     "pretest": "npm run lint",
     "pretty": "prettier-standard 'src/*.js'",
-    "secure": "nsp check",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "npm run unit",
     "unit": "mocha src/*-spec.js",
@@ -86,7 +84,6 @@
     "git-issues": "1.3.1",
     "license-checker": "24.1.0",
     "mocha": "6.1.3",
-    "nsp": "3.2.1",
     "pre-git": "3.17.1",
     "precinct": "5.3.1",
     "prettier-standard": "9.1.1",

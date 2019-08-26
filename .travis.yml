@@ -21,4 +21,5 @@ branches:
     - /^v\d+\.\d+\.\d+$/
 script:
   - npm test
-  - npx cypress run
+  # Run Cypress tests and send results to Cypress Dashboard
+  - npx cypress run --record

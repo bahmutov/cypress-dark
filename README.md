@@ -13,6 +13,8 @@
 
 You can find videos from Cypress Dark test run on [Cypress Dashboard](https://dashboard.cypress.io/#/projects/ipnbuo/runs)
 
+You can see this theme in action, including playing audio clips on failed test in this [video from ReactiveConf](https://www.youtube.com/watch?v=swpz0H0u13k) around minute 22.
+
 ## Install
 
 Requires [Node](https://nodejs.org/en/) version 6 or above.
@@ -51,10 +53,10 @@ If the theme name is unknown (look at CSS files in [src](src) folder), or unspec
 
 ## Themes
 
-For now all themes are shipped with this package and can use CSS variables. Available thems are:
+For now all themes are shipped with this package and can use CSS variables. Available themes are:
 
 - [dark](src/dark.css) see [images/dark.png](images/dark.png)
-- [halloween](src/halloween.css) see [images/halloween.png](images/halloween.png)
+- [halloween](src/halloween.css) see [images/halloween.png](images/halloween.png), also check out how it plays witch's laughter if a test fails in [src/halloween.js](src/halloween.js)
 
 ## Dark page under test
 

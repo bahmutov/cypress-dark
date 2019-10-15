@@ -192,3 +192,8 @@
   .collapsible-more {
   margin-left: 5px;
 }
+.reporter .runnable,
+.reporter .command-method,
+.reporter strong {
+  color: var(--active-color);
+}

@@ -85,7 +85,7 @@
     "license-checker": "24.1.0",
     "mocha": "6.2.1",
     "pre-git": "3.17.1",
-    "precinct": "5.3.1",
+    "precinct": "6.3.1",
     "prettier-standard": "9.1.1",
     "semantic-release": "15.13.24",
     "standard": "12.0.1",

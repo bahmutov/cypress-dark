@@ -77,7 +77,7 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
-    "ban-sensitive-files": "1.9.2",
+    "ban-sensitive-files": "1.9.15",
     "cypress": "3.4.1",
     "dependency-check": "3.4.1",
     "deps-ok": "1.4.1",

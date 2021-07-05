@@ -63,6 +63,10 @@
   color: var(--active-color);
 }
 
+.reporter .runnable-header {
+  background-color: var(--background);
+  color: var(--active-color);
+}
 .reporter header {
   background-color: var(--background);
   color: var(--active-color);

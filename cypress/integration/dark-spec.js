@@ -38,6 +38,7 @@ describe('Cypress themes', () => {
 
   it('has passing test', () => {
     expect(1).to.equal(1)
+    cy.screenshot('dark-theme', { capture: 'runner' })
   })
 
   it('has skipped test')

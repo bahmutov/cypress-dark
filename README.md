@@ -1,4 +1,4 @@
-# cypress-dark ![cypress version](https://img.shields.io/badge/cypress-3.8.3-brightgreen)
+# cypress-dark ![cypress version](https://img.shields.io/badge/cypress-7.7.0-brightgreen)
 
 > Dark mode for Cypress test runner from user space
 

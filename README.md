@@ -1,10 +1,9 @@
-# cypress-dark ![cypress version](https://img.shields.io/badge/cypress-3.8.3-brightgreen)
+# cypress-dark ![ci status][ci-image] ![cypress version](https://img.shields.io/badge/cypress-3.8.3-brightgreen)
 
 > Dark mode for Cypress test runner from user space
 
 [![NPM][npm-icon]][npm-url]
 
-[![Build status][ci-image]][ci-url]
 [![semantic-release][semantic-image]][semantic-url]
 [![standard][standard-image]][standard-url]
 [![renovate-app badge][renovate-badge]][renovate-app]
@@ -116,8 +115,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 [npm-icon]: https://nodei.co/npm/cypress-dark.svg?downloads=true
 [npm-url]: https://npmjs.org/package/cypress-dark
-[ci image]: https://github.com/bahmutov/cypress-dark/workflows/ci/badge.svg?branch=master
-[ci url]: https://github.com/bahmutov/cypress-dark/actions
+[ci-image]: https://github.com/bahmutov/cypress-dark/workflows/ci/badge.svg?branch=master
+[ci-url]: https://github.com/bahmutov/cypress-dark/actions
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg

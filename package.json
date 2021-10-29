@@ -41,7 +41,7 @@
   "main": "src/",
   "private": false,
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
   },
   "release": {
     "analyzeCommits": {
@@ -73,8 +73,7 @@
     "unused-deps": "dependency-check --detective precinct --unused --no-dev .",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "ban-sensitive-files": "1.9.16",
@@ -88,8 +87,7 @@
     "precinct": "5.3.1",
     "prettier-standard": "9.1.1",
     "semantic-release": "17.4.7",
-    "standard": "12.0.1",
-    "travis-deploy-once": "5.0.11"
+    "standard": "12.0.1"
   },
   "dependencies": {
     "postcss": "7.0.39",

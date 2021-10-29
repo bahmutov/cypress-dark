@@ -6,6 +6,8 @@
   --light-element: #444648;
   --active-button: #292c2e;
   --active-color: #ffa22f;
+  --url-color: #dd5911;
+  --url-hover-color: #dd3611;
   --runner-shadow: inset 0 0 10px #f88d09;
   --wrap-shadow: 0 3px 6px #f88d09;
   --button-border: 1px solid #3a3a3a;
@@ -64,6 +66,16 @@
   background-color: var(--light-element);
 }
 
+.runner .url:hover {
+  color: var(--url-hover-color) !important;
+}
+
+.runner .loading-container {
+  color: var(--header-color);
+  background-color: var(--background);
+  border: var(--header-border);
+}
+
 .runner .viewport-info button {
   text-shadow: none;
 }
@@ -105,10 +117,20 @@
   color: var(--active-color);
 }
 
+.reporter a {
+  color: var(--url-color);
+}
+.reporter a:hover {
+  color: var(--url-hover-color);
+}
+
 .reporter .runnable {
   background-color: var(--background);
 }
 .reporter .runnable:hover {
+  background-color: var(--background);
+}
+.reporter .command-wrapper {
   background-color: var(--background);
 }
 .reporter .commands-container {

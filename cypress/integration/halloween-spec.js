@@ -20,6 +20,9 @@ describe('Cypress themes', { baseUrl: 'http://www.halloween-website.com/' }, () 
   before(() => {
     cy.visit('/')
     cy.get('#camera_wrap').should('be.visible')
+      .find('.cameraContent.cameracurrent').should('be.visible')
+    cy.get('.banner1').should('be.visible')
+    cy.contains('.banner2', 'Trick or Treat').should('be.visible')
       .wait(2000)
   })
 
@@ -30,6 +33,7 @@ describe('Cypress themes', { baseUrl: 'http://www.halloween-website.com/' }, () 
 
   it('has passing test', () => {
     expect(1).to.equal(1)
+    cy.screenshot('Halloween', {capture: 'runner'})
   })
 
   it('has skipped test')

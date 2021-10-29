@@ -36,6 +36,11 @@
 .reporter {
   background-color: var(--background);
 }
+.reporter .runnable-header {
+  background-color: var(--background);
+  box-shadow: var(--header-shadow);
+  -webkit-box-shadow: var(--header-shadow);
+}
 
 .runner header {
   background-color: var(--background);
@@ -270,13 +275,13 @@
 }
 
 .reporter .runnable.test.runnable-failed > .runnable-wrapper {
-  border-left: 10px solid var(--failed-color);
+  border-left: 5px solid var(--failed-color);
 }
 .reporter .runnable.test.runnable-passed > .runnable-wrapper {
-  border-left: 10px solid var(--passed-color);
+  border-left: 5px solid var(--passed-color);
 }
 .reporter .runnable.test.runnable-pending > .runnable-wrapper {
-  border-left: 10px solid var(--pending-color);
+  border-left: 5px solid var(--pending-color);
 }
 .reporter .stats li.failed {
   color: var(--failed-color);
@@ -300,12 +305,12 @@
   color: 'inherit';
 }
 .reporter .runnable.suite.runnable-failed > div > .runnable-wrapper {
-  border-left: 10px solid var(--failed-color);
+  border-left: 5px solid var(--failed-color);
 }
 .reporter .runnable.suite.runnable-passed > div > .runnable-wrapper {
-  border-left: 10px solid var(--passed-color);
+  border-left: 5px solid var(--passed-color);
 }
 .reporter .runnable.suite.runnable-pending > div > .runnable-wrapper,
 .reporter .runnable.test.runnable-pending > .runnable-wrapper {
-  border-left: 10px solid var(--pending-color);
+  border-left: 5px solid var(--pending-color);
 }

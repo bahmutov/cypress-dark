@@ -5,7 +5,7 @@ const {
   hasFailed,
   loadTheme,
   stubMediaQuery
-} = require('./utils')
+} = require('../utils')
 
 /* eslint-env mocha, browser */
 /* global cy */

@@ -1,9 +1,9 @@
 {
-  "name": "cypress-dark",
+  "name": "cypress-themes",
   "description": "Dark mode for Cypress test runner from user space",
   "version": "0.0.0-development",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
-  "bugs": "https://github.com/bahmutov/cypress-dark/issues",
+  "bugs": "https://github.com/bahmutov/cypress-themes/issues",
   "config": {
     "pre-git": {
       "commit-msg": "simple",
@@ -30,7 +30,7 @@
     "src/*.mp3",
     "!src/*-spec.js"
   ],
-  "homepage": "https://github.com/bahmutov/cypress-dark#readme",
+  "homepage": "https://github.com/bahmutov/cypress-themes#readme",
   "keywords": [
     "cypress",
     "cypress-io",
@@ -56,7 +56,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bahmutov/cypress-dark.git"
+    "url": "https://github.com/bahmutov/cypress-themes.git"
   },
   "scripts": {
     "ban": "ban",

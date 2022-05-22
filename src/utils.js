@@ -9,7 +9,7 @@ const getSourceFolder = () => {
   // the user package has installed it using relative "file:.." link
   const installedAsFile = Cypress._.startsWith(__dirname, '/..')
   const sourceFolder = installedAsFile
-    ? join('node_modules/cypress-dark/src')
+    ? join('node_modules/cypress-themes/src')
     : __dirname
   return sourceFolder.replace(/^\//, '')
 }
@@ -24,7 +24,7 @@ const knownThemes = ['dark', 'halloween']
 
 const getHead = () => Cypress.$(parent.window.document.head)
 
-const isStyleLoaded = $head => $head.find('#cypress-dark').length > 0
+const isStyleLoaded = $head => $head.find('#cypress-themes').length > 0
 
 const getTheme = () => Cypress._.toLower(Cypress.config('theme') || 'dark')
 
@@ -81,7 +81,7 @@ const loadTheme = theme => {
       .then(convertCssVariables)
       .then(css => {
         $head.append(
-          `<style type="text/css" id="cypress-dark" theme="${theme}">\n${css}</style>`
+          `<style type="text/css" id="cypress-themes" theme="${theme}">\n${css}</style>`
         )
       })
   }

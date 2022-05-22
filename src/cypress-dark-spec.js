@@ -1,6 +1,6 @@
 'use strict'
 
 /* eslint-env mocha */
-describe('cypress-dark', () => {
+describe('cypress-themes', () => {
   it('write this test')
 })

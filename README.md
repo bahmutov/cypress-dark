@@ -1,4 +1,4 @@
-# cypress-dark ![ci status][ci-image] ![cypress version](https://img.shields.io/badge/cypress-8.7.0-brightgreen) [![cypress-dark](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ipnbuo/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ipnbuo/runs)
+# cypress-themes ![ci status][ci-image] ![cypress version](https://img.shields.io/badge/cypress-8.7.0-brightgreen) [![cypress-themes](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/ipnbuo/master&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/ipnbuo/runs)
 
 > Dark mode for Cypress test runner from user space
 
@@ -19,7 +19,7 @@ You can see this theme in action, including playing audio clips on failed test i
 Requires [Node](https://nodejs.org/en/) version 6 or above.
 
 ```sh
-npm install --save-dev cypress-dark
+npm install --save-dev cypress-themes
 ```
 
 ## Use
@@ -29,7 +29,7 @@ npm install --save-dev cypress-dark
 Add to your [cypress/support/index.js](cypress/support/index.js) line
 
 ```js
-require('cypress-dark/src/halloween')
+require('cypress-theme/src/halloween')
 ```
 
 ### Install Dark theme
@@ -37,7 +37,7 @@ require('cypress-dark/src/halloween')
 Add to your [cypress/support/index.js](cypress/support/index.js) line
 
 ```js
-require('cypress-dark')
+require('cypress-theme/src/dark')
 ```
 
 By default dark theme will be loaded. If you want to switch to another theme, set its name in your [cypress.json](cypress.json) file.
@@ -54,12 +54,12 @@ If the theme name is unknown (look at CSS files in [src](src) folder), or unspec
 
 For now all themes are shipped with this package and can use CSS variables. Available themes are:
 
-- [dark](src/dark.css) see [images/dark.png](images/dark.png)
-- [halloween](src/halloween.css) see [images/halloween.png](images/halloween.png), also check out how it plays witch's laughter if a test fails in [src/halloween.js](src/halloween.js)
+- [dark](src/dark/dark.css) see [images/dark.png](images/dark.png)
+- [halloween](src/halloween/halloween.css) see [images/halloween.png](images/halloween.png), also check out how it plays witch's laughter if a test fails in [src/halloween.js](src/halloween.js)
 
 ## Dark page under test
 
-You can "tell" the web application under test to switch to the dark mode using `media (prefers-color-scheme: dark)` if the application uses JavaScript media query to check for preferred scheme. See original issue [#29](https://github.com/bahmutov/cypress-dark/issues/29) and [cypress/fixtures/custom-dark.html](cypress/fixtures/custom-dark.html) page.
+You can "tell" the web application under test to switch to the dark mode using `media (prefers-color-scheme: dark)` if the application uses JavaScript media query to check for preferred scheme. See original issue [#29](https://github.com/bahmutov/cypress-themes/issues/29) and [cypress/fixtures/custom-dark.html](cypress/fixtures/custom-dark.html) page.
 
 To enable stubbing `window.matchMedia` from your tests and "force" your app to switch to dark mode, set option in `cypress.json`
 
@@ -89,7 +89,7 @@ Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2018
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/cypress-dark/issues) on Github
+[open issue](https://github.com/bahmutov/cypress-themes/issues) on Github
 
 ## MIT License
 
@@ -116,10 +116,10 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[npm-icon]: https://nodei.co/npm/cypress-dark.svg?downloads=true
-[npm-url]: https://npmjs.org/package/cypress-dark
-[ci-image]: https://github.com/bahmutov/cypress-dark/workflows/ci/badge.svg?branch=master
-[ci-url]: https://github.com/bahmutov/cypress-dark/actions
+[npm-icon]: https://nodei.co/npm/cypress-themes.svg?downloads=true
+[npm-url]: https://npmjs.org/package/cypress-themes
+[ci-image]: https://github.com/bahmutov/cypress-themes/workflows/ci/badge.svg?branch=master
+[ci-url]: https://github.com/bahmutov/cypress-themes/actions
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg

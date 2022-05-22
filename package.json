@@ -38,7 +38,7 @@
     "theme"
   ],
   "license": "MIT",
-  "main": "src/",
+  "main": "src/dark",
   "private": false,
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

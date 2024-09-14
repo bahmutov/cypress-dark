@@ -90,7 +90,7 @@
     "standard": "12.0.1"
   },
   "dependencies": {
-    "postcss": "7.0.39",
+    "postcss": "8.4.47",
     "postcss-css-variables": "0.17.0"
   }
 }

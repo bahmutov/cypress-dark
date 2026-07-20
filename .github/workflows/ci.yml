@@ -5,18 +5,18 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Check out code 🛎
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.8.0
 
       # https://github.com/cypress-io/github-action
       - name: Cypress tests 🧪
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v2.11.8
         with:
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       - name: Semantic Release 🚀
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v2.7.0
         with:
           branch: master
         env:

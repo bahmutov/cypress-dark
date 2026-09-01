@@ -16,7 +16,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
       - name: Semantic Release 🚀
-        uses: cycjimmy/semantic-release-action@v2
+        uses: cycjimmy/semantic-release-action@v6.0.0
         with:
           branch: master
         env:
